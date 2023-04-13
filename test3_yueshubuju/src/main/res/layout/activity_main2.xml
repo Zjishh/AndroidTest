@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="第二个界面"
+    tools:ignore="MissingConstraints"
+    android:textSize="80dp">
+
+</TextView>
+
+    <Button
+        android:id="@+id/bt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="回去"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/bt_guanbi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="关闭Activity2"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="198dp"
+        tools:layout_editor_absoluteY="153dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

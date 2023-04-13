@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication">
+        <activity
+            android:name=".MainActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+ <!--action:用来响应的动作名（指定intent对象的动作)-->
+
+                <action android:name="android.intent.action.MAIN" />
+                <!--↑↑↑可以把一个activity指定为程序的主启动项(APP的入口）-->
+                <!--category:用于为action添加额外信感,指定在什么样的情况下，这个动作才会被响应-->
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".aActivity"
+            android:label="a是新的Atv"></activity>
+    </application>
+
+</manifest>

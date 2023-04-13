@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".MainActivity">
+
+
+
+
+<!--   设置fragment-->
+    <fragment
+        android:id="@+id/fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="com.example.test5_fragment.BlankFragmentone"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@id/fragment">
+        <ImageView
+            android:id="@+id/img1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bottom_1"
+            android:layout_weight="1"/>
+        <ImageView
+            android:id="@+id/img2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bottom_2"
+            android:layout_weight="1"/>
+        <ImageView
+            android:id="@+id/img3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bottom_3"
+            android:layout_weight="1"/>
+        <ImageView
+            android:id="@+id/img4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bottom_4"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
