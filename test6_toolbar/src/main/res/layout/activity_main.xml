@@ -14,13 +14,21 @@
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
-            app:title="biaoti"
-            app:subtitle="zibiaoti"
-            app:navigationIcon="@drawable/back"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
-            app:popupTheme="@style/Theme.MyApplication.PopupOverlay" />
+
+            app:navigationIcon="@drawable/back"
+            app:popupTheme="@style/Theme.MyApplication.PopupOverlay"
+            app:subtitle="zibiaoti"
+            app:title="biaoti" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:textSize="30dp"
+            android:text="666666"/>
 
     </com.google.android.material.appbar.AppBarLayout>
 
