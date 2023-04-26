@@ -20,4 +20,10 @@
         android:layout_height="wrap_content"
         android:text="GotoListview2"></Button>
 
+    <Button
+        android:id="@+id/RC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RC"></Button>
+
 </LinearLayout>

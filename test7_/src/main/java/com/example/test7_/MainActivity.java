@@ -33,5 +33,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        View RC = findViewById(R.id.RC);
+        RC.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(MainActivity.this, RecycleViewActivity.class);
+
+                startActivity(intent);
+            }
+        });
     }
 }
