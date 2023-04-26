@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +26,15 @@ public class ListView2 extends AppCompatActivity {
         Adapter f  = new Adapter(ListView2.this,R.layout.fruit_item,fruitList);
 
         viewById.setAdapter(f);
+
+        //点击事件  setOnItemClickListener每一项设置点击事件
+        viewById.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                System.out.println(fruitList.get(i).getName());
+                Toast.makeText(ListView2.this, fruitList.get(i).getName(), Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     private void initFruit() {

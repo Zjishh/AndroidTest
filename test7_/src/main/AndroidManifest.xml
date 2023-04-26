@@ -8,6 +8,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".RecycleViewActivity"
+            android:exported="false" />
+        <activity
             android:name=".ListView2"
             android:exported="false" />
         <activity
