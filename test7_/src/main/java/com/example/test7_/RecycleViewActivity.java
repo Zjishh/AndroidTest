@@ -1,9 +1,12 @@
 package com.example.test7_;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -23,8 +26,8 @@ public class RecycleViewActivity extends AppCompatActivity {
 
         initFruit();
 
-        RecyclerView RCview = findViewById(R.id.RC);
 
+        RecyclerView RCview = findViewById(R.id.RC);
         //适配器
         RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(fruitList);
         ///设置RC管理器
@@ -33,6 +36,13 @@ public class RecycleViewActivity extends AppCompatActivity {
         RCview.setAdapter(recyclerViewAdapter);
 
         //
+
+        //列表的间隔线(Item：项，Decoration：装饰)(复制粘贴，只需要知道R.drawable.line即可)
+        //LinearLayoutManager.VERTICAL：线性布局管理器垂直
+        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(RecycleViewActivity.this, LinearLayoutManager.VERTICAL);
+        Drawable drawable = ContextCompat.getDrawable(RecycleViewActivity.this, R.drawable.line);
+        dividerItemDecoration.setDrawable(drawable);
+        RCview.addItemDecoration(dividerItemDecoration);
 
     }
 

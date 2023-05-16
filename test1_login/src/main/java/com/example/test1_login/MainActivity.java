@@ -16,12 +16,10 @@ public class MainActivity extends AppCompatActivity {
 
         //登录点击事件
         Button b = findViewById(R.id.loginbut);
-        b.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        b.setOnClickListener((View view) -> {
                 Toast.makeText(MainActivity.this,"点击了登录",Toast.LENGTH_LONG).show();
             }
-        });
+        );
 
     }
 
