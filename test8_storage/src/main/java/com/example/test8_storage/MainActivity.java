@@ -18,13 +18,10 @@ public class MainActivity extends AppCompatActivity {
 
 
         bt.setOnClickListener((view -> {
-            Intent intent = new Intent(MainActivity.this,InternalActivity.class);
+            Intent intent = new Intent(MainActivity.this, InternalActivity.class);
             startActivity(intent);
         }));
 
-        bt2.setOnClickListener((view -> {
-            Intent intent = new Intent(MainActivity.this,AccountinformationActivity.class);
-            startActivity(intent);
-        }));
+        bt2.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, AccountinformationActivity.class)));
     }
 }

@@ -26,7 +26,6 @@ public class AddressAdapter extends RecyclerView.Adapter<AddressAdapter.ViewHold
         ImageView img;
         TextView text;
         TextView phonenumber;
-
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             img = itemView.findViewById(R.id.img);
@@ -37,14 +36,13 @@ public class AddressAdapter extends RecyclerView.Adapter<AddressAdapter.ViewHold
 
     @NonNull
     @Override
-    public AddressAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        //对象装换
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.person, parent, false);
-        AddressAdapter.ViewHolder holder = new ViewHolder(view);
-        //点击事件
-        View itemView = holder.itemView;
-        itemView.setOnClickListener((View) -> {
+        ViewHolder holder = new ViewHolder(view);
+        holder.itemView.setOnClickListener((View) -> {
             int position = holder.getAdapterPosition();
-            Toast.makeText(view.getContext(), personList.get(position).getName(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(view.getContext(), personList.get(position).getNumber(), Toast.LENGTH_SHORT).show();
         });
         return holder;
     }
@@ -59,7 +57,6 @@ public class AddressAdapter extends RecyclerView.Adapter<AddressAdapter.ViewHold
 
     @Override
     public int getItemCount() {
-        System.out.println(personList.get(0).getNumber());
         return personList.size();
     }
 }
